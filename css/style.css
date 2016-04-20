@@ -1,0 +1,17 @@
+body{
+	background-color: #849d8f;
+	font: 16px/22px Roboto, Arial, sans-serif;
+	color: #fff;
+}
+
+h1{
+	font: 35px/41px Roboto, Arial, sans-serif;
+	font-weight: bold;
+	color: #fff;
+}
+
+h2{
+	font: 24px/30px Roboto, Arial, sans-serif;
+	font-weight: 500;
+	color: #323232;
+}
