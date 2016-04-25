@@ -28,13 +28,13 @@
 				</ul>
 			</nav>
 			<div class="user-block">
-				<a class="search" href="">Поиск</a>
+				<a class="lg-btn search" href="">Поиск</a>
 				<div class="search-form">
 					<form action="#">
 						<input type="search" name="search" placeholder="Что ищем?">
 					</form>
 				</div>
-				<a class="login" href="">Вход</a>
+				<a class="lg-btn login" href="">Вход</a>
 				<div class="login-form">
 					<form action="#">
 						<input type="text" name="login-email" placeholder="Электронная почта">
@@ -46,7 +46,7 @@
 						</p>
 					</form>
 				</div>
-				<a class="basket" href="">Корзина</a>
+				<a class="lg-btn basket" href="">Корзина</a>
 				<div class="basket-content">
 				</div>
 			</div>
@@ -65,25 +65,26 @@
 					<li><a href="catalog.html">Сливочное</a></li>
 				</ul>
 			</div>
-			<h1 class="catalog-header">Сливочное мороженное</h1>
+			<h1 class="catalog-header">Сливочное мороженое</h1>
 			<div class="filters">
 				<form action="#">
-					<div>
-						<label for="sort">Сортировка:
-							<select class="filter-field filters-sort" id="sort">
-								<option>по популярности</option>
-								<option>сначачла недорогие</option>
-								<option>сначала дорогие</option>
-								<option>по жирности</option>
-							</select>
-						</label>
+					<div class="filter-group">
+						<label for="sort" class="filters-label">
+							Сортировка:
+						</label>	
+						<select class="filter-field filters-sort" id="sort">
+							<option>по популярности</option>
+							<option>сначачла недорогие</option>
+							<option>сначала дорогие</option>
+							<option>по жирности</option>
+						</select>
 					</div>
-					<div>
-						<p>Цена: 100 руб. - 500 руб.</p>
+					<div  class="filter-group">
+						<p class="filters-label">Цена: 100 руб. - 500 руб.</p>
 						<div class="filter-field filters-range"></div>
 					</div>
-					<div>
-						<p>Жирность:</p>
+					<div class="filter-group">
+						<p class="filters-label">Жирность:</p>
 						<div class="filter-field filters-fat">
 							<label for="fat0">
 								<input id="fat0" type="radio" name="fat" value="0">
@@ -103,8 +104,8 @@
 							</label>
 						</div>
 					</div>
-					<div>
-						<p>Наполнители:</p>
+					<div  class="filter-group">
+						<p class="filters-label">Наполнители:</p>
 						<div class="filter-field filters-filler">
 							<label for="filler-chocko">
 								<input id="filler-chocko" type="checkbox" name="filler" value="chockolate" checked>
@@ -265,7 +266,7 @@
 					</a>
 				</li>
 			</ul>
-			<nav class="page-list">
+			<nav class="page-list clearfix">
 				<ul>
 					<li id="current-page"><a href="">prev</a></li>
 					<li><a href="">1</a></li>
@@ -286,6 +287,11 @@
 					<li><a class="social-btn social-vk" href="http://vk.com">Вконтакте</a></li>
 				</ul>
 			</div>
+			<div class="footer-copyright">
+				<p>
+					Сделано в <a href="http://www.htmlacademy.ru">HTML Academy</a> &copy;2016
+				</p>
+			</div>
 			<nav class="footer-menu">
 				<ul class="menu-inform">
 					<li><a href=""><b>Для поставщиков</b></a></li>
@@ -296,11 +302,7 @@
 					<li><a href="">Экологические стандарты</a></li>
 				</ul>
 			</nav>
-			<div class="footer-copyright">
-				<p>
-					Сделано в <a href="http://www.htmlacademy.ru">HTML Academy</a> &copy;2016
-				</p>
-			</div>
+			
 		</footer>
 	</body>
 </html>
