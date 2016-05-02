@@ -1,17 +1,600 @@
-body{
+body {
+	padding: 0;
 	background-color: #849d8f;
-	font: 16px/22px Roboto, Arial, sans-serif;
+}
+
+ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.centering-container {
+	margin: 0 auto;
+	box-sizing: border-box;
+	padding: 0 2%;
+	padding-top: 10px;
+	min-width: 900px;
+	max-width: 1200px;
+}
+
+.submenu,
+.search-form,
+.login-form,
+.product-view-btn,
+.feedback-form,
+.basket-content
+{
+	display: none;
+}
+
+.main-header{
+	min-height: 60px;
+}
+
+.logo,
+.main-menu
+{
+	float: left;
+}
+
+.user-block {
+	float: right;
+}
+
+.logo {
+	margin-left: -5px;
+}
+
+.main-menu {
+	font-size: 0px;
+}
+
+.main-menu li{
+	display: inline-block;
+	padding: 20px 0;
+	padding-left: 25px;
+	font: 16px/18px 'Roboto Bold', Arial, sans-serif;
+	font-weight: bold;
+	vertical-align: top;
+}
+
+.user-block {
+	width: 261px;
+	font-size: 0;
+}
+
+.lg-btn {
+	display: inline-block;
+	margin: 12px 0;
+	margin-right: 9px;
+	padding: 8px 0;
+	background-color: rgba(255, 255, 255, 0.2);
+	font: 14px/16px 'Roboto Medium', Arial, sans-serif;
+	font-weight: 500;
+}
+
+.clearfix {
+	content: '';
+	display: table;
+	clear: both;
+}
+
+.search {
+	width: 33px;
+}
+
+.login {
+	width: 93px;
+}
+
+.basket	{
+	margin-right: 0;
+	width: 117px;
+}
+
+.work-information {
+	position: relative;
+}
+
+.work-information p{
+	position: absolute;
+	top: 45px;
+	right: 0;
+	/*width: 171px;*/
+	font-family: 'Roboto', Arial, sans-serif;
+	font-size: 14px;
+	font-weight: bold;
+	line-height: 24px;
+	text-align: right;
 	color: #fff;
 }
 
-h1{
-	font: 35px/41px Roboto, Arial, sans-serif;
+.work-information span {
+	font-family: 'Roboto Black', Arial, sans-serif;
+	font-size: 22px;
+	font-weight: normal;
+}
+
+.slider {
+	position: relative;
+	margin-bottom: 28px;
+	box-sizing: border-box;
+	min-height: 550px;
+	padding-bottom: 13px;
+}
+
+.banner {
+	margin-bottom:30px;
+	color: #fff;
+}
+
+.banner div {
+	position: relative;
+	float: left;
+	box-sizing: border-box;
+	padding: 16px 20px;
+	padding-right: 30px;
+	width: 48.9%;
+	min-height: 230px;
+	border-radius: 15px;
+}
+
+.banner div:last-child {
+	float: right;
+}
+
+.banner h1{
+	margin: 0;
+	margin-bottom: 15px; 
+	font: 35px/41px 'Roboto', Arial, sans-serif;
+	font-weight: bold;
+}
+
+.banner p{
+	margin: 0;
+	font: 18px/22px 'Roboto', Arial, sans-serif;
+	font-weight: bold;
+}
+
+.banner-btn {
+	position: absolute;
+	bottom: 20px;
+	right: 20px;
+}
+
+.banner-raspberry {
+	background: url('../img/index/raspberry_1200.jpg') no-repeat;
+}
+
+.banner-chocko-powder {
+	background: url('../img/index/chocolate_1200.jpg') no-repeat;
+}
+
+
+.leaders,
+.icecream-list
+{
+	margin-bottom: 8px;
+	font-size: 0;
+}
+
+.product {
+	position: relative;
+	display: inline-block;
+	margin-right: 2%;
+	margin-bottom: 28px;
+	padding-top: 5px;
+	min-height: 289px;
+	width: 23.5%;
+	font: 16px/22px 'Roboto', Arial, sans-serif;
+	font-weight: 500;
+	text-align: center;
+	vertical-align: top;
+	background-color: rgba(255, 255, 255, 0.3);
+}
+
+.product:nth-child(5n-4) {
+	margin-left: 0;
+}
+.product:nth-child(4n+4) {
+	margin-right: 0;
+}
+
+.product-image {
+	position: relative;
+	margin: 0 auto;
+	margin-bottom: 14px;
+	padding: 50% 0;
+	border-radius: 50%;
+	font-size:0;
+}
+
+.product-price {
+	position: absolute;
+	left: 0;
+	bottom: 10px;
+	margin: 0;
+	font: 45px/45px 'Roboto', Arial, sans-serif;
+	font-weight: bold;
+	text-align: left;
+	color: #fff;
+	vertical-align: bottom;
+	display: block;
+}
+
+.rub-symbol {
+	font: 30px/45px 'Roboto', Arial, sans-serif;
+	font-weight: bold;
+	padding-left: 38px; 
+	background: url('../img/rub.svg') no-repeat 5px 0;
+}
+
+.creamy-orange {
+	background: url('../img/icecream_1_1200.png') no-repeat 50% 50%;
+}
+
+.creamy-coffee {
+	background: url('../img/icecream_2_1200.png') no-repeat 50% 50%;
+}
+
+.creamy-strawberry{
+	background: url('../img/icecream_3_1200.png') no-repeat 50% 50%;
+}
+
+.creamy-caramel {
+	background: url('../img/icecream_4_1200.png') no-repeat 50% 50%;
+}
+
+.creamy-cranberry {
+	background: url('../img/icecream_5_1200.png') no-repeat 50% 50%;
+}
+
+.creamy-blueberry {
+	background: url('../img/icecream_6_1200.png') no-repeat 50% 50%;
+}
+
+.creamy-lemon {
+	background: url('../img/icecream_7_1200.png') no-repeat 50% 50%;
+}
+
+.creamy-chocochips {
+	background: url('../img/icecream_8_1200.png') no-repeat 50% 50%;
+}
+
+.creamy-vanilla {
+	background: url('../img/icecream_9_1200.png') no-repeat 50% 50%;
+}
+
+.creamy-menthol {
+	background: url('../img/icecream_10_1200.png') no-repeat 50% 50%;
+}
+
+.creamy-blackchoco {
+	background: url('../img/icecream_11_1200.png') no-repeat 50% 50%;
+}
+
+.creamy-mint {
+	background: url('../img/icecream_12_1200.png') no-repeat 50% 50%;
+}
+
+.hit::before {
+	content: '';
+	position: absolute;
+	top: 10px;
+	left: 0;
+	width: 61px;
+	height: 61px;
+	background: url('../img/index/hit.png') no-repeat 0 0;
+	z-index: 100;
+}
+
+.product-discribe {
+	padding: 0 5px;
+}
+
+.aboutus {
+	margin-bottom: 40px;
+	padding: 20px;
+	padding-bottom: 14px;
+	font-size: 0;
+	background: #ecdec2 url('../img/index/waffle_pattern.png') repeat 0 0;
+
+}
+
+.aboutus h2 {
+	margin: 8px 0;
+	font: 24px/30px 'Roboto', Arial, sans-serif;
+	font-weight: 500; 
+}
+
+.aboutus p {
+	display: inline-block;
+	box-sizing: border-box;
+	padding-top: 12px;
+	padding-left: 57px;
+	margin: 0;
+	margin-right: 2%;
+	margin-bottom: 10px;
+	width: 49%;
+	font: 16px/22px 'Roboto', Arial, sans-serif;
+	vertical-align: top;		 
+}
+
+.aboutus p:nth-child(odd) {
+	margin-right: 0;
+	padding-left: 59px;
+	padding-right: 5px;
+}
+
+.information {
+	margin-bottom: 40px;
+	font-size: 0;
+}
+
+.information div {
+	display: inline-block;
+	margin-right: 2%;
+	box-sizing: border-box;
+	padding: 10px 20px;
+	width: 49%;
+	min-height: 220px;
+	font: 16px/22px 'Roboto', Arial, sans-serif;
+	vertical-align: top;
+	background-color: #fff;
+}
+
+.information div:last-child {
+	margin-right: 0;
+}
+
+.blognews {
+	background: url('../img/index/strawberry_1200.jpg') no-repeat 100% 0;
+}
+
+.blognews-ref {
+	font: 24px/30px 'Roboto', Arial, sans-serif;
+	font-weight: bold;
+	background-color: rgba(255, 255, 255, 0.8);
+}
+
+.mailing {
+	border-width: 8px;
+	border-color: #333;
+	border-style: solid;
+}
+
+.mailing p {
+	margin-bottom: 30px;
+	padding-right: 5px;
+}
+
+.location {
+	position: relative;
+	width: 100%;
+	padding-top: 63px;
+	height: 367px;
+	background: #fff url('../img/index/map_1200.jpg') no-repeat 50% 50%;
+}
+
+.contacts {
+	position: absolute;
+	top: 63px;
+	right: 0;
+	box-sizing: border-box;
+	padding: 15px 25px;
+	width: 304px;
+	min-height: 307px;
+	background: #fff;
+}
+
+.main-footer {
+	min-height: 100px;
+	font-size: 0;
+}
+
+.footer-menu ul,
+.footer-social li
+{
+	display: inline-block;
+	vertical-align: top;
+}
+
+.menu-inform,
+.menu-document 
+{
+	font: 13px/18px 'Roboto Bold', Arial, sans-serif;
+	font-weight: bold;
+}
+
+.footer-social {
+	float: left;
+}
+
+.footer-social li{
+	padding: 36px 0;
+	margin-right: 12px;
+	vertical-align: top;
+}
+
+.footer-social li:last-child {
+	margin-right: 0;
+}
+
+.social-btn {
+	display: block;
+	width: 32px;
+	height: 32px;
+	border: 3px solid rgba(255, 255, 255, 0.5);	
+}
+
+.footer-menu {
+	padding: 34px 0;
+	text-align: center;
+}
+
+.footer-menu ul{
+	margin-right: 20px;
+	text-align: left;
+}
+
+.menu-inform {	
+	padding-left: 25px;
+}
+
+.menu-inform b {
+	font-weight: bold;
+}
+
+.menu-document{
+	padding-left: 10px;
+}
+
+.footer-copyright {
+	float: right;
+	box-sizing: border-box;
+	padding-top: 48px;
+	width: 190px;
+	font: 12px/18px 'Roboto', Arial, sans-serif;
+	color: #fff;
+}
+
+.breadcrumb {
+	margin-top: 25px;
+	margin-bottom: 2px; 
+	font-size: 0;
+}
+
+.breadcrumb li {
+	display: inline-block;
+	margin-right: 5px;
+	padding: 3px 0;
+	padding-right: 15px;
+	font: 14px/16px 'Roboto', Arial, sans-serif;
+	vertical-align: top;
+}
+
+.catalog-header {
+	margin: 0;
+	margin-bottom: 28px;
+	padding: 0;
+	font: 35px/41px 'Roboto', Arial, sans-serif;
 	font-weight: bold;
 	color: #fff;
 }
 
-h2{
-	font: 24px/30px Roboto, Arial, sans-serif;
+.filters {
+	margin: 0;
+	margin-bottom: 20px;
+	width: 860px;
+	font-size: 0;
+}
+
+.filters input[type="checkbox"],
+.filters input[type="radio"]
+{
+	display: none;
+}
+
+.filters-label {
+	margin: 0;
+	margin-bottom: 2px;
+	padding: 0;
+	padding-left: 16px;
+	display: block;
+	font: 14px/16px 'Roboto', Arial, sans-serif;
 	font-weight: 500;
-	color: #323232;
+}
+
+.filter-group {
+	display: inline-block;
+	margin-right: 14px;
+	margin-bottom: 16px;
+	font: 16px 'Roboto', Arial, sans-serif;
+	font-weight: 500;
+	vertical-align: top;
+}
+
+.filter-group:nth-child(2n+3) {
+	margin-right: 0;
+}
+
+.filter-field {
+	box-sizing: border-box;
+	padding: 9px 16px;
+	background-color: rgba(255, 255, 255, 0.2);
+	font: 16px 'Roboto', Arial, sans-serif;
+	font-weight: 500;
+}
+
+.filters-sort {
+	padding-left: 10px;
+	padding-right: 5px;
+}
+
+.filters-range {
+	width: 220px;	
+}
+
+.filters-fat {
+	width: 415px;
+	padding-right: 5px;
+}
+
+.filters-fat label{
+	margin-right: 15px;
+	padding-left: 32px;
+}
+
+.filters-fat label:last-child{
+	margin-right: 0;
+}
+
+.filters-filler{
+	width: 702px;
+}
+
+.filters-filler label{
+	margin-right: 20px;
+	padding-left: 30px;
+}
+
+.filters-filler label:last-child{
+	margin-right: 0;
+}
+
+.filters-btn {
+	margin-top: 18px;
+	padding: 8px 25px;
+	width: 144px;
+}
+
+.icecream-list {
+	margin-bottom: 52px;
+}
+
+.page-list {
+	width: 100%;
+	margin-bottom: 32px;
+}
+
+.page-list ul{
+	float: right;
+	font-size: 0;
+}
+
+.page-list li {
+	display: inline-block;
+	margin-right: 3px;
+	padding: 2px 0;
+	width: 25px;
+	height: 21px;
+	font: 16px/18px 'Roboto', Arial, sans-serif;
+	font-weight: 500;
+	text-align: center;
+	vertical-align: top;
+}
+
+.page-list li:last-child {
+	margin-right: 0;
 }
