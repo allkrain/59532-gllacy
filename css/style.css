@@ -227,7 +227,7 @@ ul {
 	font: 30px/45px 'Roboto', Arial, sans-serif;
 	font-weight: bold;
 	padding-left: 38px; 
-	background: url('../img/rub.svg') no-repeat 10px 0;
+	background: url('../img/rub.svg') no-repeat 5px 0;
 }
 
 .creamy-orange {
@@ -370,14 +370,17 @@ ul {
 }
 
 .location {
+	position: relative;
 	width: 100%;
 	padding-top: 63px;
 	height: 367px;
-	background: #fff url('../img/index/map_1200.jpg') 50% 50%;
+	background: #fff url('../img/index/map_1200.jpg') no-repeat 50% 50%;
 }
 
 .contacts {
-	float: right;
+	position: absolute;
+	top: 63px;
+	right: 0;
 	box-sizing: border-box;
 	padding: 15px 25px;
 	width: 304px;
