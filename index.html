@@ -6,7 +6,7 @@
 		<meta name="description" content="Магазин Глейси - это онлайн и офлайн магазин по продаже мороженого собственного производства на развес">
 		<title>HTML Academy: Глейси</title>
 		<link rel="stylesheet" href="css/normalize.css">
-		<link href='https://fonts.googleapis.com/css?family=Roboto:400,400italic,500,500italic,700,700italic&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+		<link href='https://fonts.googleapis.com/css?family=Roboto:400,400italic,500,500italic,700,700italic,900,900italic&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
 		<link rel="stylesheet" href="css/style.css">
     </head>
     <body>
@@ -19,7 +19,9 @@
 					</p>
 				</div>	
 				<div class="logo">
-					<a href="index.html"><img src="img/logo.svg" alt="Gllacy Shop" width="154" height="64"></a>
+					<a href="index.html">
+						<img src="img/logo.svg" alt="Gllacy Shop" width="154" height="64">
+					</a>
 				</div>
 				<nav class="main-menu">
 					<ul>
@@ -37,27 +39,33 @@
 					</ul>
 				</nav>
 				<div class="user-block">
-					<a class="lg-btn search" href="">Поиск</a>
-					<div class="search-form">
-						<form action="#">
-							<input type="search" name="search" placeholder="Что ищем?">
-						</form>
+					<div class="lg-btn search">
+						<a class="" href="">Поиск</a>
+						<div class="search-form">
+							<form action="#" method="get">
+								<input type="search" name="search-field" placeholder="Что ищем?">
+							</form>
+						</div>
 					</div>
-					<a class="lg-btn login" href="">Вход</a>
-					<div class="login-form">
-						<form action="#">
-							<input type="text" name="login-email" placeholder="Электронная почта">
-							<input type="password" name="password" placeholder="Пароль">
-							<input type="submit" value="Войти">
-							<p>
-								<a href="">Забыли пароль?</a><br>
-								<a href="">Новая регистрация?</a>
-							</p>
-						</form>
+					<div class="lg-btn login">
+						<a class="" href="">Вход</a>
+						<div class="login-form">
+							<form class="clearfix" action="#" method="post">
+								<input type="text" name="login-email" placeholder="Электронная почта">
+								<input type="password" name="password" placeholder="Пароль">
+								<input class="btn login-btn" type="submit" value="Войти">
+								<p>
+									<a href="">Забыли пароль?</a><br>
+									<a href="">Новая регистрация?</a>
+								</p>
+							</form>
+						</div>
 					</div>
-					<a class="lg-btn basket"  href="" data-title="Корзина">Пусто</a>
-					<div class="basket-content">
-					</div>
+					<div class="lg-btn basket">
+						<a class=""  href="" data-title="Корзина">Пусто</a>
+						<div class="basket-content">
+						</div>
+					</div>	
 				</div>
 			</header>
 			<main>
@@ -165,7 +173,9 @@
 				<section class="information">
 					<div class="blognews">
 						<p>
-							Новое в нашем блоге<br>
+							<span>
+								Новое в нашем блоге
+							</span>	
 							<a class="blognews-ref" href="">
 								10  способов сервировки<br> фруктовых щербетов<br> к столу</a>
 						</p>
@@ -174,7 +184,7 @@
 						<p>
 							Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой не нужной ерунды. Честно =)
 						</p>
-						<form action="#">
+						<form class="mailing-form clearfix" action="#">
 							<input type="email" name="email" placeholder="Электронная почта">
 							<button class="btn mailing-btn" type="submit">Отправить</button> 
 						</form>
@@ -221,7 +231,7 @@
 				</div>
 				<nav class="footer-menu">
 					<ul class="menu-inform">
-						<li><a href=""><b>Для поставщиков</b></a></li>
+						<li class="heart"><a  href=""><b>Для поставщиков</b></a></li>
 						<li><a href="">О производстве</a></li>
 					</ul>
 					<ul class="menu-document">
