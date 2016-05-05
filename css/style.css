@@ -953,7 +953,7 @@ a:active
 	border-color: transparent;
 	background: url('../img/index/mail_pattern2.png')repeat 0 0,
 				url('../img/index/mail_pattern.png') repeat 0 0,					
-				#fff;	
+				#f8f7f4;	
 	background-origin:  padding-box, border-box;
 	background-clip: padding-box, border-box;
 }
@@ -1090,6 +1090,8 @@ a:active
 	display: block;
 	width: 32px;
 	height: 32px;
+	background-origin: border-box;
+	background-clip: padding-box;
 	border: 3px solid rgba(255, 255, 255, 0.5);	
 	border-radius: 50%;
 	opacity: 0.8;
@@ -1106,35 +1108,35 @@ a:active
 }
 
 .social-twitter {
-	background: url('../img/sprite.svg') no-repeat -1px -70px;
+	background: url('../img/sprite.svg') no-repeat 0px -70px;
 }
 
 .social-instagram {
-	background: url('../img/sprite.svg') no-repeat -35px -70px;
+	background: url('../img/sprite.svg') no-repeat -34px -70px;
 }
 
 .social-fb {
-	background: url('../img/sprite.svg') no-repeat -1px -105px;
+	background: url('../img/sprite.svg') no-repeat 0px -105px;
 }
 
 .social-vk {
-	background: url('../img/sprite.svg') no-repeat -36px -105px;
+	background: url('../img/sprite.svg') no-repeat -35px -105px;
 }
 
 .social-twitter:active {
-	background: url('../img/sprite.svg') no-repeat -1px -160px;
+	background: url('../img/sprite.svg') no-repeat 0px -159px;
 }
 
 .social-instagram:active {
-	background: url('../img/sprite.svg') no-repeat -36px -160px;
+	background: url('../img/sprite.svg') no-repeat -35px -159px;
 }
 
 .social-fb:active {
-	background: url('../img/sprite.svg') no-repeat -1px -195px;
+	background: url('../img/sprite.svg') no-repeat 0px -193px;
 }
 
 .social-vk:active {
-	background: url('../img/sprite.svg') no-repeat -36px -195px;
+	background: url('../img/sprite.svg') no-repeat -35px -193px;
 }
 
 .footer-menu {
