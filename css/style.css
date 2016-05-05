@@ -950,9 +950,12 @@ a:active
 	color: #5a5a5a;
 	border-width: 9px;
 	border-style: solid;
-	border-color: #fff;
-	-o-border-image: url('../img/index/mail.png') 9;
-	   border-image: url('../img/index/mail.png') 9;
+	border-color: transparent;
+	background: url('../img/index/mail_pattern2.png')repeat 0 0,
+				url('../img/index/mail_pattern.png') repeat 0 0,					
+				#fff;	
+	background-origin:  padding-box, border-box;
+	background-clip: padding-box, border-box;
 }
 
 .information .mailing p {
