@@ -628,7 +628,7 @@ a:active
 	background-color: rgba(255, 255, 255, 0.4);
 }
 
-input[type="radio"]:checked + label {
+.slider-switches input[type="radio"]:checked + label {
 	background-color: #fff;
 }
 
@@ -724,13 +724,13 @@ input[type="radio"]:checked + label {
 }
 
 .product:hover .product-view-btn {
-	display: inline-block;
+	display: block;
+	margin: 0 auto;
 	margin-top: 10px;
 	margin-bottom: 10px;
 	padding-left: 7px;
 	padding-right: 7px;
 	text-align: center;
-	vertical-align: top;
 }
 
 .product-image {
@@ -1191,19 +1191,45 @@ input[type="radio"]:checked + label {
 	background: url('../img/HA_logo.svg') no-repeat 0 20px;
 }
 
+main, header {}
+
 .breadcrumb {
-	margin-top: 25px;
-	margin-bottom: 2px; 
+	margin-top: 18px;
+/*	margin-bottom: 0px; */
 	font-size: 0;
 }
 
 .breadcrumb li {
+	position: relative;
 	display: inline-block;
 	margin-right: 5px;
-	padding: 3px 0;
+	padding: 0;
+/*	padding: 3px 0;*/
 	padding-right: 15px;
 	font: 14px/16px 'Roboto', Arial, sans-serif;
 	vertical-align: top;
+}
+
+.breadcrumb li::after {
+	content: '»';
+	position: absolute;
+	top: 0;
+	right: 0;
+	display: block;
+	width: 7px;
+	height: 16px;
+	font: inherit;
+}
+
+.breadcrumb li:last-child::after {
+	display: none;
+}
+
+.breadcrumb li:last-child a,
+.breadcrumb li:last-child a:hover,
+.breadcrumb li:last-child a:active {
+	color: #fff;
+	border: none;
 }
 
 .catalog-header {
@@ -1241,7 +1267,7 @@ input[type="radio"]:checked + label {
 .filter-group {
 	display: inline-block;
 	margin-right: 14px;
-	margin-bottom: 16px;
+	margin-bottom: 14px;
 	font: 16px 'Roboto', Arial, sans-serif;
 	font-weight: 500;
 	vertical-align: top;
@@ -1255,13 +1281,25 @@ input[type="radio"]:checked + label {
 	box-sizing: border-box;
 	padding: 9px 16px;
 	background-color: rgba(255, 255, 255, 0.2);
-	font: 16px 'Roboto', Arial, sans-serif;
+	font: 16px/18px 'Roboto', Arial, sans-serif;
 	font-weight: 500;
+	border-radius: 18px;
+}
+
+.filters-sort:hover{
+	color: #323232;
+	background-color: #fff;
 }
 
 .filters-sort {
+	color: inherit;
 	padding-left: 10px;
 	padding-right: 5px;
+}
+
+.filters-sort option {
+	font: 14px/16px 'Robot', Arial, sans-serif;
+	color: #323232;
 }
 
 .filters-range {
@@ -1270,16 +1308,61 @@ input[type="radio"]:checked + label {
 
 .filters-fat {
 	width: 415px;
-	padding-right: 5px;
+	padding-left: 15px;
+	padding-right: 15px;
 }
 
 .filters-fat label{
+	position: relative;
 	margin-right: 15px;
-	padding-left: 32px;
+	padding-left: 30px;
 }
 
 .filters-fat label:last-child{
 	margin-right: 0;
+}
+
+.filters-fat label::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 18px;
+	height: 18px;
+	border: 1px solid #f8f7f4;
+	border-radius: 50%;
+}
+
+.filters-fat input[type="radio"]:checked + label::after {
+	content: '';
+	position: absolute;
+	top: 4px;
+	left: 4px;
+	width: 11px;
+	height: 11px;
+	background-color: #f8f7f4;
+	border-radius: 50%;	
+}
+
+.filters-fat input[type="radio"]:checked + label::before {
+	width: 16px;
+	height: 16px;
+	border: 2px solid #f8f7f4;
+} 
+
+.filters-fat label:hover::before {
+	width: 16px;
+	height: 16px;
+	border: 2px solid #f8f7f4;
+}
+
+.filters-fat input[type="radio"]:disabled + label::before,
+.filters-fat input[type="radio"]:disabled + label:hover::before
+{	
+	width: 18px;
+	height: 18px;
+	border-width: 1px;
+	opacity: 0.4;
 }
 
 .filters-filler{
@@ -1287,22 +1370,83 @@ input[type="radio"]:checked + label {
 }
 
 .filters-filler label{
-	margin-right: 20px;
-	padding-left: 30px;
+	position: relative;
+	margin-right: 17px;
+	padding-left: 32px;
 }
 
 .filters-filler label:last-child{
 	margin-right: 0;
 }
 
+.filters-filler label::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 18px;
+	height: 18px;
+	border: 1px solid #f8f7f4;
+	border-radius: 3px;
+}
+
+.filters-filler input[type="checkbox"]:checked + label::after {
+	content: '';
+	position: absolute;
+	top: 5px;
+	left: 5px;
+	width: 8px;
+	height: 5px;
+	border-left: 2px solid #f8f7f4;
+	border-bottom: 2px solid #f8f7f4;
+	-webkit-transform: rotate(-45deg);
+	        transform: rotate(-45deg);
+}
+
+.filters-filler input[type="checkbox"]:checked + label::before {
+	width: 16px;
+	height: 16px;
+	border: 2px solid #f8f7f4;
+} 
+
+.filters-filler label:hover::before {
+	width: 16px;
+	height: 16px;
+	border: 2px solid #f8f7f4;
+}
+
+.filters-filler input[type="checkbox"]:disabled + label::before,
+.filters-filler input[type="checkbox"]:disabled + label:hover::before
+{	
+	width: 18px;
+	height: 18px;
+	border-width: 1px;
+	opacity: 0.4;
+}
+
 .filters-btn {
+	color: inherit;
 	margin-top: 18px;
 	padding: 8px 25px;
 	width: 144px;
+	outline: none;
+	border: 2px solid #fff;
+}
+
+.filters-btn:hover {
+	background-color: #fff;
+	color: #353535;
+}
+
+.filters-btn:active {
+	padding: 10px 28px;
+	background-color: #ececec;
+	box-shadow: inset 0 2px 1px 0 #696968;
+	border: none;
 }
 
 .icecream-list {
-	margin-bottom: 52px;
+	margin-bottom: 54px;
 }
 
 .page-list {
@@ -1316,17 +1460,85 @@ input[type="radio"]:checked + label {
 }
 
 .page-list li {
+	position: relative;
 	display: inline-block;
-	margin-right: 3px;
-	padding: 2px 0;
+	margin-right: 4px;
+/*	padding: 2px 0;*/
+/*	width: 25px;*/
+/*	height: 21px;*/
+/*	text-align: center;*/
+	vertical-align: top;
+}
+
+.page-list a {
+	display: inline-block;
 	width: 25px;
-	height: 21px;
-	font: 16px/18px 'Roboto', Arial, sans-serif;
+	height: 25px;
+	font: 16px/25px 'Roboto', Arial, sans-serif;
 	font-weight: 500;
 	text-align: center;
 	vertical-align: top;
+	border: none;
+	border-radius: 50%;
+}
+
+.page-list a:hover{
+	color: #fff;
+	background-color: rgba(255, 255, 255, 0.2);
+}
+
+.current-page a,
+.current-page a:hover,
+.current-page a:active,
+.page-list a:active
+{
+	color: #323232;
+	background-color: #fff;
+}
+
+.disabled a,
+.disabled a:hover,
+.disabled a:active,
+.disabled::before
+{
+	background-color: none;
+	opacity: 0.2;
 }
 
 .page-list li:last-child {
 	margin-right: 0;
+}
+
+.page-list li:first-child a:hover,
+.page-list li:last-child a:hover,
+.page-list li:first-child a:active,
+.page-list li:last-child a:active
+{
+	background: none;
+}
+
+.page-list li:first-child::before,
+.page-list li:last-child::before
+{
+	content: '';
+	position: absolute;
+	top: 7px;
+	width: 7px;
+	height: 7px;
+}
+
+.page-list li:first-child::before {
+	right: 7px;
+	border-left: 2px solid #fff;
+	border-bottom: 2px solid #fff;
+	-webkit-transform: rotate(45deg);
+	        transform: rotate(45deg);
+}
+
+.page-list li:last-child::before {
+	left: 7px;
+	border-right: 2px solid #fff;
+	border-bottom: 2px solid #fff;
+	-webkit-transform: rotate(-45deg);
+	        transform: rotate(-45deg);
 }
