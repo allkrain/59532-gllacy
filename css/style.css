@@ -3,7 +3,14 @@ body {
 	font: 16px/22px 'Roboto', Arial, sans-serif;
 	color: #fff;
 	background-color: #849d8f;
-	
+	background-image:
+		url('../img/index/cornets_1.png'),
+		-webkit-radial-gradient(50% 335px 525px,  #cff6e1 0%, transparent 100%);
+	background-image: 
+		url('../img/index/cornets_1.png'),
+		radial-gradient(525px at 50% 335px,  #cff6e1 0%, transparent 100%);
+	background-repeat: no-repeat;
+	background-position: 50% 83px, 50% 0;
 }
 
 ul {
@@ -572,6 +579,10 @@ a:active
 	font-weight: normal;
 }
 
+.slider-block {
+	position: relative;
+}
+
 .slider {
 	position: relative;
 	margin: 0;
@@ -583,7 +594,7 @@ a:active
 	text-align: center;
 }
 
-.slider p {
+.slider-slogan {
 	margin: 0 auto;
 	margin-bottom: 32px;
 	padding: 0;
@@ -607,9 +618,10 @@ a:active
 	position: absolute;
 	left: 0;
 	bottom: 45px;
+	z-index: 100;
 }
 
-.slider-switches input[type="radio"] {
+.slider-block input[type="radio"] {
 	display: none;
 }
 
@@ -628,9 +640,43 @@ a:active
 	background-color: rgba(255, 255, 255, 0.4);
 }
 
-.slider-switches input[type="radio"]:checked + label {
+#slide1:checked ~ .slider-switches > label[for="slide1"],
+#slide2:checked ~ .slider-switches > label[for="slide2"],
+#slide3:checked ~ .slider-switches > label[for="slide3"],
+.slide-switch-checked
+{
 	background-color: #fff;
 }
+
+.slide {
+	display: none;
+	margin: 0 auto;
+}
+
+#slide1:checked ~ .slider .slide1-content,
+#slide2:checked ~ .slider .slide2-content,
+#slide3:checked ~ .slider .slide3-content,
+.slide-view
+{
+	display: block;
+}
+
+
+/*
+#slide1:checked ~ .slider
+{
+	background: url('../img/index/cornets_1.png') no-repeat 50% 5px;
+}
+
+#slide2:checked ~ .slider{
+	background: url('../img/index/cornets_2.png') no-repeat 50% 5px;
+}
+
+#slide3:checked ~ .slider{
+	background: url('../img/index/cornets_3.png') no-repeat 50% 5px;
+}
+*/
+
 
 .banner {
 	margin-bottom:32px;
@@ -992,12 +1038,17 @@ a:active
 
 .location {
 	position: relative;
-	width: 100%;
+	margin-left: -2%;
+	width: 104%;
 	padding-top: 63px;
 	height: 367px;
-	background: #fff url('../img/index/map_1200.jpg') no-repeat 50% 50%;
+	background: 
+		url('../img/index/pin.png') no-repeat 260px 140px,
+		url('../img/index/map_1200.jpg') no-repeat 0 50%,
+		#fff;
 }
 
+/*
 .location::before {
 	content: '';
 	position: absolute;
@@ -1012,6 +1063,7 @@ a:active
 		url('../img/index/map_1200.jpg') no-repeat 0 50%,
 		#fff;
 }
+*/
 
 /*
 .location::after {
@@ -1028,7 +1080,7 @@ a:active
 .contacts {
 	position: absolute;
 	top: 63px;
-	right: 0;
+	right: 2%;
 	box-sizing: border-box;
 	padding: 15px 25px;
 	width: 304px;
@@ -1546,4 +1598,40 @@ main, header {}
 	border-bottom: 2px solid #fff;
 	-webkit-transform: rotate(-45deg);
 	        transform: rotate(-45deg);
+}
+
+.slide1-background {
+	background-color: #849d8f;
+	background-image:
+		url('../img/index/cornets_1.png'),
+		-webkit-radial-gradient(50% 335px 525px,  #cff6e1 0%, transparent 100%);
+	background-image: 
+		url('../img/index/cornets_1.png'),
+		radial-gradient(525px at 50% 335px,  #cff6e1 0%, transparent 100%);
+	background-repeat: no-repeat;
+	background-position: 50% 83px, 50% 0;
+}
+
+.slide2-background {
+	background-color: #8996a6;
+	background-image: 
+		url('../img/index/cornets_2.png'),
+		-webkit-radial-gradient(50% 335px 525px,  #d6ebfc 0%, transparent 100%);
+	background-image: 
+		url('../img/index/cornets_2.png'),
+		radial-gradient(525px at 50% 335px,  #d6ebfc 0%, transparent 100%);
+	background-repeat: no-repeat;
+	background-position: 50% 83px, 50% 0;
+}
+
+.slide3-background {
+	background-color: #9d8b84;
+	background-image: 
+		url('../img/index/cornets_2.png'),
+		-webkit-radial-gradient(50% 335px 525px,  #fae4db 0%, transparent 100%);
+	background-image: 
+		url('../img/index/cornets_2.png',
+		radial-gradient(525px at 50% 335px,  #fae4db 0%, transparent 100%);
+	background-repeat: no-repeat;
+	background-position: 50% 83px, 50% 0;
 }

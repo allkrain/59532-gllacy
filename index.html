@@ -69,19 +69,35 @@
 				</div>
 			</header>
 			<main>
-				<div class="slider">
+				<div class="slider-block">
+					<input id="slide1" type="radio" name="slide-switch" value="1" checked>
+					<input id="slide2" type="radio" name="slide-switch" value="2">
+					<input id="slide3" type="radio" name="slide-switch" value="3">
 					<div class="slider-switches">
-						<input id="slide1" type="radio" name="slide-switch" value="1">
 						<label for="slide1"></label>
-						<input id="slide2" type="radio" name="slide-switch" value="2">
 						<label for="slide2"></label>
-						<input id="slide3" type="radio" name="slide-switch" value="3">
 						<label for="slide3"></label>
 					</div>
-					<p class="slider-slogan">
-						Крем-брюле и пломбир с малиновым джемом
-					</p>
-					<button class="btn slider-btn">Давайте оба!</button>
+					<div class="slider">
+						<div class="slide slide1-content">
+							<p class="slider-slogan">
+								Крем-брюле и пломбир с малиновым джемом
+							</p>
+							<button class="btn slider-btn">Давайте оба!</button>
+						</div>
+						<div class="slide slide2-content">
+							<p class="slider-slogan">
+								Шоколадный пломбир и лимонный сорбет 
+							</p>
+							<button class="btn slider-btn">Давайте оба!</button>
+						</div>
+						<div class="slide slide3-content">
+							<p class="slider-slogan">
+								Пломбир с помадкой и клубничный щербет
+							</p>
+							<button class="btn slider-btn">Давайте оба!</button>
+						</div>
+					</div>	
 				</div>
 				<section class="banner clearfix">
 					<div class="banner-raspberry">
@@ -241,5 +257,6 @@
 				</nav>
 			</footer>
 		</div>
+		<script src="js/script.js"></script>
 	</body>
 </html>
