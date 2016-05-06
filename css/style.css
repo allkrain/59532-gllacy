@@ -550,14 +550,15 @@ a:active
 .basket-content {
 	position: absolute;
 	top: 100%;
-	right: -4px;
+	right: 0;
 	display: none;
 	padding: 20px 15px;
 	width: 510px;
 	background-color: #f8f7f4;
 	background-clip: padding-box;
-	border: 4px solid transparent;
-	border-radius: 8px;
+	border-top: 4px solid transparent;
+	border-radius: 8px 8px 4px 4px;
+	box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.4);
 	z-index: 100;
 }
 
