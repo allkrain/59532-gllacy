@@ -206,7 +206,7 @@
 						</form>
 					</div>
 				</section>
-				<section class="location">
+				<section id="location" class="location">
 					<div class="contacts">
 						<p>
 							Адрес главного офиса и<br>
@@ -219,15 +219,6 @@
 							(с 10 до 20 ежедневно)
 						</p>
 						<a class="btn feedback-btn" href="">Форма обратной связи</a>
-						<div class="feedback-form">
-							<p>Мы обязательно вам ответим!</p>
-							<form action="#">
-								<input type="text" name="name" placeholder="Как вас зовут?">
-								<input type="email" name="email" placeholder="Ваша почта для ответа?">
-								<textarea name="message" rows="5" placeholder="Напишите что-нибудь..."></textarea>
-								<button class="btn feedback-btn" type="submit">Отправить</button>
-							</form>
-						</div>
 					</div>
 				</section>
 			</main>
@@ -257,6 +248,18 @@
 				</nav>
 			</footer>
 		</div>
+		<div class="feedback-form">
+			<button class="close"></button>
+			<h2>Мы обязательно вам ответим!</h2>
+			<form action="#" method="post">
+				<input type="text" name="name" placeholder="Как вас зовут?">
+				<input type="email" name="email" placeholder="Ваша почта для ответа?">
+				<textarea name="message" rows="5" placeholder="Напишите что-нибудь..."></textarea>
+				<button class="btn feedback-submit-btn" type="submit">Отправить</button>
+			</form>
+		</div>
+		<div class="overlay"></div>
 		<script src="js/script.js"></script>
+		<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=DxuEr6KorX9aXE-HA6lamG4KFwPJBpl7&id=location&lang=ru_RU&sourceType=constructor&scroll=true"></script>
 	</body>
 </html>

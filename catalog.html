@@ -55,7 +55,53 @@
 					</div>
 					<div class="lg-btn basket" id="fullbasket">
 						<a class=""  href="" data-title="Корзина">2 товара</a>
-						<div class="basket-content">
+						<div class="basket-content clearfix">
+							<table class="product-order-list">
+								<tfoot class="total-price">
+									<tr>
+										<td colspan="5">
+											Итого: 750 руб.
+										</td>
+									</tr>
+								</tfoot>
+								<tr class="sale-item">
+									<td class="item-delete">
+										<button class="sale-delete-btn"></button>
+									</td>
+									<td class="item-view">
+										<img class="sale-image" src="img/icecream_1_mini.png" width="33" height="33">
+									</td>
+									<td class="item-description">
+										Пломбир с апельсиновым джемом
+									</td>
+									<td class="item-calclulation">
+										1,5 кг x <span class="sale-price">200 руб.</span>
+									</td>
+									<td class="item-price">
+										300 руб.
+									</td>
+								</tr>
+								<tr class="sale-item">
+									<td class="item-delete">
+										<button class="sale-delete-btn"></button>
+									</td>
+									<td class="item-view">
+										<img class="sale-image" src="img/icecream_3_mini.png" width="33" height="33">
+									</td>
+									<td class="item-description">
+										Клубничный пломбир с присыпкой из белого шоколада
+									</td>
+									<td class="item-calclulation">
+										1,5 кг x <span class="sale-price">300 руб.</span>
+									</td>
+									<td class="item-price">
+										450 руб.
+									</td>
+								</tr>
+							</table>
+							<button class="btn order-btn">
+								Оформить заказ
+							</button>
 						</div>
 					</div>	
 				</div>
@@ -80,17 +126,21 @@
 						<div class="filter-group">
 							<label for="sort" class="filters-label">
 								Сортировка:
-							</label>	
-							<select class="filter-field filters-sort" id="sort">
-								<option>по популярности</option>
-								<option>сначачла недорогие</option>
-								<option>сначала дорогие</option>
-								<option>по жирности</option>
-							</select>
+							</label>
+							<div class="filter-field filters-sort">
+								<select class="filters-sort-select" id="sort">
+									<option>по популярности</option>
+									<option>сначачла недорогие</option>
+									<option>сначала дорогие</option>
+									<option>по жирности</option>
+								</select>
+							</div>	
 						</div>
 						<div  class="filter-group">
 							<p class="filters-label">Цена: 100 руб. - 500 руб.</p>
-							<div class="filter-field filters-range"></div>
+							<div class="filter-field filters-range">
+								<div class="range"></div>
+							</div>
 						</div>
 						<div class="filter-group">
 							<p class="filters-label">Жирность:</p>
