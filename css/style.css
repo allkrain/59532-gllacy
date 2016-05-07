@@ -1203,10 +1203,12 @@ a:active
 	width: 100%;
 /*	padding-top: 63px;*/
 	height: 430px;
+/*
 	background: 
 		url('../img/index/pin.png') no-repeat 260px 140px,
 		url('../img/index/map_1200.jpg') no-repeat 0 50%,
 		#fff;
+*/
 }
 
 .location-map {
@@ -1215,6 +1217,10 @@ a:active
 	left: 50%;
 	width: 100vw;
 	height: 100%;
+	background: 
+		url('../img/index/pin.png') no-repeat 260px 140px,
+		url('../img/index/map_1200.jpg') no-repeat 0 50%,
+		#fff;
 	-webkit-transform: translateX(-50vw);
 	        transform: translateX(-50vw);
 	z-index: -10;
