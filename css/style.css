@@ -283,12 +283,12 @@ a:active
 .search::before {
 	content: '';
 	position: absolute;
-	top: 8px;
-	left: 2px;
-	width: 24px;
-	height: 20px;
+	top: 7px;
+	left: 7px;
+	width: 18px;
+	height: 18px;
 	background-image: url('../img/sprite.svg');
-	background-position: 5px 0;
+	background-position: 0 0;
 	background-repeat: no-repeat;
 }
 
@@ -297,14 +297,8 @@ a:active
 }
 
 .search:hover::before {
-	content: '';
-	position: absolute;
-	top: 8px;
-	left: 8px;
-	width: 20px;
-	height: 20px;
 	background-image: url('../img/sprite.svg');
-	background-position: -26px 0;
+	background-position: -25px 0;
 	background-repeat: no-repeat;
 }
 
@@ -333,6 +327,7 @@ a:active
 
 
 .search-form input{
+	margin: 1px;
 	padding: 9px 14px;
 	box-sizing: border-box;
 	width: 100%;
@@ -344,10 +339,12 @@ a:active
 }
 
 .search-form input:hover {
+	margin: 0;
 	border: 2px solid rgba(153, 153, 153, 0.5);
 }
 
 .search-form input:focus {
+	margin: 0;
 	border: 2px solid rgba(85, 135, 224, 0.5);
 }
 
@@ -369,12 +366,12 @@ a:active
 .login::before {
 	content: '';
 	position: absolute;
-	top: 8px;
-	left: 11px;
-	width: 27px;
-	height: 22px;
+	top: 6px;
+	left: 16px;
+	width: 20px;
+	height: 20px;
 	background-image: url('../img/sprite.svg');
-	background-position: 5px -20px;
+	background-position: 0 -20px;
 	background-repeat: no-repeat;
 }
 
@@ -388,14 +385,8 @@ a:active
 }
 
 .login:hover::before {
-	content: '';
-	position: absolute;
-	top: 8px;
-	left: 16px;
-	width: 27px;
-	height: 22px;
 	background-image: url('../img/sprite.svg');
-	background-position: -26px -20px;
+	background-position: -25px -20px;
 	background-repeat: no-repeat;
 }
 
@@ -439,7 +430,8 @@ a:active
 .login-form input[type="text"],
 .login-form input[type="password"]
 {
-	margin-bottom: 20px;
+	margin: 1px;
+	margin-bottom: 21px;
 	padding: 9px 14px;
 	width: 100%;
 	font: inherit;
@@ -453,12 +445,16 @@ a:active
 .login-form input[type="text"]:hover,
 .login-form input[type="password"]:hover
 {
+	margin: 0;
+	margin-bottom: 20px;
 	border: 2px solid rgba(153, 153, 153, 0.5);
 }
 
 .login-form input[type="text"]:focus,
 .login-form input[type="password"]:focus
 {
+	margin: 0;
+	margin-bottom: 20px;
 	border: 2px solid rgba(85, 135, 224, 0.5);
 }
 
@@ -494,12 +490,12 @@ a:active
 .basket::before {
 	content: '';
 	position: absolute;
-	top: 3px;
-	left: 17px;
+	top: 7px;
+	left: 16px;
 	width: 25px;
 	height: 25px;
 	background-image: url('../img/sprite.svg');
-	background-position: -1px -40px;
+	background-position: 0 -45px;
 	background-repeat: no-repeat;
 }
 
@@ -513,14 +509,8 @@ a:active
 }
 
 .basket:hover::before {
-	content: '';
-	position: absolute;
-	top: 7px;
-	left: 16px;
-	width: 25px;
-	height: 20px;
 	background-image: url('../img/sprite.svg');
-	background-position: -47px 0px;
+	background-position: -46px 0px;
 	background-repeat: no-repeat;
 }
 
@@ -532,14 +522,8 @@ a:active
 #fullbasket::before,
 #fullbasket:hover::before
 {
-	content: '';
-	position: absolute;
-	top: 3px;
-	left: 17px;
-	width: 25px;
-	height: 25px;
 	background-image: url('../img/sprite.svg');
-	background-position: -26px -40px;
+	background-position: -25px -45px;
 	background-repeat: no-repeat;
 }
 
@@ -839,39 +823,52 @@ a:active
 	position: relative;
 	display: inline-block;
 	margin-right: 2%;
-	margin-bottom: 28px;
-/*	padding-top: 5px;*/
+	margin-bottom: 23px;
 	min-height: 289px;
 	width: 23.5%;
 	font: 16px/22px 'Roboto', Arial, sans-serif;
 	font-weight: 500;
 	text-align: center;
 	vertical-align: top;
-/*	background-color: rgba(255, 255, 255, 0.3);*/
-}
-
-.product:nth-child(5n-4) {
-	margin-left: 0;
-}
-.product:nth-child(4n) {
-	margin-right: 0;
 }
 
 .product-wrapper {
 	margin: 0;
-	padding: 0;
-	padding-top: 5px;
+	padding: 5px;
+}
+
+.product:nth-child(5n-4),
+.product:nth-child(5n-4) .product-wrapper
+{
+	margin-left: 0;
+	padding-left: 0;
+}
+
+.product:nth-child(5n-4) .product-wrapper{
+	padding-right: 10px;
+}
+
+.product:nth-child(4n),
+.product:nth-child(4n) .product-wrapper
+{
+	margin-right: 0;
+	padding-right: 0;
+}
+
+.product:nth-child(4n) .product-wrapper {
+	padding-left: 10px;
 }
 
 .product:hover .product-wrapper {
 	position: absolute;
-	top: -5px;
-	left: -5px;
-	padding: 5px;
-	width: calc(100% + 10px);
-	background-color: rgba(255, 255, 255, 0.3);
+	background-color: rgba(248, 247, 244, 0.3);
 	border-radius: 4px;
+	box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.2);
 	z-index: 100;
+}
+
+.product-discribe {
+	padding: 0 5px;
 }
 
 .product:hover .product-discribe {
@@ -879,8 +876,8 @@ a:active
 	border: none;
 }
 
-.product:hover .product-view-btn {
-	display: block;
+.product-view-btn {
+	display: none;
 	margin: 0 auto;
 	margin-top: 10px;
 	margin-bottom: 10px;
@@ -889,12 +886,14 @@ a:active
 	text-align: center;
 }
 
+.product:hover .product-view-btn {
+	display: block;
+}
+
 .product-image {
 	position: relative;
 	margin: 0 auto;
-	margin-bottom: 6px;
-/*				padding: 50% 0;*/
-/*				border-radius: 50%;*/
+	margin-bottom: 12px;
 	font-size:0;
 	overflow: hidden;
 }
@@ -911,39 +910,6 @@ a:active
 	max-height: 267px;
 	border-radius: 50%;
 }
-
-/*
-.product:hover {
-	padding: 5px;
-	width: calc(23.5% - 10px);
-	background-color: rgba(255, 255, 255, 0.3);
-	border-radius: 4px;
-}
-
-.product:hover .product-discribe {
-	color: #fff;
-	border: none;
-}
-
-.product:hover .product-view-btn {
-	display: block;
-	margin: 0 auto;
-	margin-top: 10px;
-	margin-bottom: 10px;
-	padding-left: 7px;
-	padding-right: 7px;
-	text-align: center;
-}
-
-.product-image {
-	position: relative;
-	margin: 0 auto;
-	margin-bottom: 14px;
-	padding: 50% 0;
-	border-radius: 50%;
-	font-size:0;
-}
-*/
 
 .product-price {
 	position: absolute;
@@ -968,56 +934,6 @@ a:active
 	background: url('../img/rub.svg') no-repeat 5px 0;
 }
 
-/*
-.creamy-orange {
-	background: url('../img/icecream_1_1200.png') no-repeat 50% 50%;
-}
-
-.creamy-coffee {
-	background: url('../img/icecream_2_1200.png') no-repeat 50% 50%;
-}
-
-.creamy-strawberry{
-	background: url('../img/icecream_3_1200.png') no-repeat 50% 50%;
-}
-
-.creamy-caramel {
-	background: url('../img/icecream_4_1200.png') no-repeat 50% 50%;
-}
-
-.creamy-cranberry {
-	background: url('../img/icecream_5_1200.png') no-repeat 50% 50%;
-}
-
-.creamy-blueberry {
-	background: url('../img/icecream_6_1200.png') no-repeat 50% 50%;
-}
-
-.creamy-lemon {
-	background: url('../img/icecream_7_1200.png') no-repeat 50% 50%;
-}
-
-.creamy-chocochips {
-	background: url('../img/icecream_8_1200.png') no-repeat 50% 50%;
-}
-
-.creamy-vanilla {
-	background: url('../img/icecream_9_1200.png') no-repeat 50% 50%;
-}
-
-.creamy-menthol {
-	background: url('../img/icecream_10_1200.png') no-repeat 50% 50%;
-}
-
-.creamy-blackchoco {
-	background: url('../img/icecream_11_1200.png') no-repeat 50% 50%;
-}
-
-.creamy-mint {
-	background: url('../img/icecream_12_1200.png') no-repeat 50% 50%;
-}
-*/
-
 .hit::before {
 	content: '';
 	position: absolute;
@@ -1027,10 +943,6 @@ a:active
 	height: 61px;
 	background: url('../img/index/hit.png') no-repeat 0 0;
 	z-index: 110;
-}
-
-.product-discribe {
-	padding: 0 5px;
 }
 
 .aboutus {
@@ -1174,6 +1086,7 @@ a:active
 }
 
 .mailing-form input[type="email"] {
+	margin: 1px;
 	padding: 12px 12px;
 	box-sizing: border-box;
 	width: calc(100% - 141px);
@@ -1185,10 +1098,12 @@ a:active
 }
 
 .mailing-form input[type="email"]:hover {
+	margin: 0;
 	border: 2px solid rgba(153, 153, 153, 0.5);
 }
 
 .mailing-form input[type="email"]:focus {
+	margin: 0;
 	border: 2px solid rgba(85, 135, 224, 0.5);
 }
 
@@ -1201,14 +1116,7 @@ a:active
 .location {
 	position: relative;
 	width: 100%;
-/*	padding-top: 63px;*/
 	height: 430px;
-/*
-	background: 
-		url('../img/index/pin.png') no-repeat 260px 140px,
-		url('../img/index/map_1200.jpg') no-repeat 0 50%,
-		#fff;
-*/
 }
 
 .location-map {
@@ -1223,37 +1131,7 @@ a:active
 		#fff;
 	-webkit-transform: translateX(-50vw);
 	        transform: translateX(-50vw);
-	z-index: -10;
 }
-
-/*
-.location::before {
-	content: '';
-	position: absolute;
-	top: 0;
-	left: -2%;
-	min-width: 900px;
-	max-width: 1200px;
-	width: 104%;
-	height: 100%;
-	background: 
-		url('../img/index/pin.png') no-repeat 260px 140px,
-		url('../img/index/map_1200.jpg') no-repeat 0 50%,
-		#fff;
-}
-*/
-
-/*
-.location::after {
-	content: '';
-	position: absolute;
-	top: 136px;
-	left: 240px;
-	width: 218px;
-	height: 142px;
-	background: url('../img/index/pin.png') no-repeat 50% 50%;
-}
-*/
 
 .contacts {
 	position: absolute;
@@ -1322,7 +1200,7 @@ a:active
 	display: block;
 	width: 32px;
 	height: 32px;
-	background-origin: border-box;
+	background-origin: padding-box;
 	background-clip: padding-box;
 	border: 3px solid rgba(255, 255, 255, 0.5);	
 	border-radius: 50%;
@@ -1631,21 +1509,15 @@ main, header {}
 	border-radius: 50%;
 }
 
-.filters-fat input[type="radio"]:checked + label::after {
-	content: '';
-	position: absolute;
-	top: 4px;
-	left: 4px;
-	width: 11px;
-	height: 11px;
-	background-color: #f8f7f4;
-	border-radius: 50%;	
-}
+
 
 .filters-fat input[type="radio"]:checked + label::before {
-	width: 16px;
-	height: 16px;
+	padding: 3px;
+	width: 10px;
+	height: 10px;
 	border: 2px solid #f8f7f4;
+	background-color: #f8f7f4;
+	background-clip: content-box;
 } 
 
 .filters-fat label:hover::before {
@@ -1724,8 +1596,8 @@ main, header {}
 
 .filters-btn {
 	color: inherit;
-	margin-top: 18px;
-	padding: 8px 25px;
+	margin-top: 20px;
+	padding: 7px 25px;
 	width: 144px;
 	outline: none;
 	border: 2px solid #fff;
@@ -1922,7 +1794,8 @@ main, header {}
 .feedback-form input,
 .feedback-form textarea
 {
-	margin-bottom: 20px;
+	margin: 1px;
+	margin-bottom: 21px;
 }
 
 .feedback-form input{
@@ -1939,12 +1812,16 @@ main, header {}
 .feedback-form input:hover,
 .feedback-form textarea:hover
 {
+	margin: 0;
+	margin-bottom: 20px;
 	border: 2px solid rgba(153, 153, 153, 0.5);
 }
 
 .feedback-form input:focus,
 .feedback-form textarea:focus
 {
+	margin: 0;
+	margin-bottom: 20px;
 	border: 2px solid rgba(85, 135, 224, 0.5);
 }
 
