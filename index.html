@@ -74,9 +74,9 @@
 					<input id="slide2" type="radio" name="slide-switch" value="2">
 					<input id="slide3" type="radio" name="slide-switch" value="3">
 					<div class="slider-switches">
-						<label for="slide1"></label>
-						<label for="slide2"></label>
-						<label for="slide3"></label>
+						<label for="slide1" class="slide-switcher"></label>
+						<label for="slide2" class="slide-switcher"></label>
+						<label for="slide3" class="slide-switcher"></label>
 					</div>
 					<div class="slider">
 						<div class="slide slide1-content">
@@ -273,9 +273,12 @@
 			<button class="close"></button>
 			<h2>Мы обязательно вам ответим!</h2>
 			<form action="#" method="post">
-				<input id="feedback=name" type="text" name="name" placeholder="Как вас зовут?">	
-				<input id="feedback-email" type="email" name="email" placeholder="Ваша почта для ответа?">			
-				<textarea id="feedback-message" name="message" rows="5" placeholder="Напишите что-нибудь..."></textarea>
+				<span class="placeholder name-placeholder" data-placeholder="Как вас зовут?"></span>
+				<input id="feedback-name" class="feedback=field" type="text" name="name" placeholder="Как вас зовут?">	
+				<span class="placeholder email-placeholder" data-placeholder="Ваша почта для ответа?"></span>
+				<input id="feedback-email" class="feedback=field" type="email" name="email" placeholder="Ваша почта для ответа?">	
+				<span class="placeholder message-placeholder" data-placeholder="Напишите что-нибудь..."></span>
+				<textarea id="feedback-message" class="feedback=field" name="message" rows="5" placeholder="Напишите что-нибудь..."></textarea>
 				<button class="btn feedback-submit-btn" type="submit">Отправить</button>
 			</form>
 		</div>
