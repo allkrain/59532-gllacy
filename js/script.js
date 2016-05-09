@@ -9,6 +9,7 @@ var slideSlogans = document.querySelectorAll(".slide");
 
 
 for (var i = 0; i< radioButtons.length; i++) {
+	console.log(radioButtons[i].getAttribute("id") + " " + radioButtons[i].checked);
 	radioButtons[i].checked = false;	
 	slideBody.classList.remove("slide"+(i+1)+"-background");
 	slideSwitchers[i].classList.remove("slide-switch-checked");
@@ -42,21 +43,29 @@ function switchSlide(number) {
 	radioButtons[number-1].checked= true;
 }
 
-document.querySelector('label[for="slide1"]').addEventListener("click", function(event) {
+document.querySelector('#slide1').addEventListener("change", function(event) {
 	event.preventDefault();
 	switchSlide(1);
 });
 
-document.querySelector('label[for="slide2"]').addEventListener("click", function(event) {
+document.querySelector('#slide2').addEventListener("change", function(event) {
 	event.preventDefault();
 	switchSlide(2);
 });
 
-document.querySelector('label[for="slide3"]').addEventListener("click", function(event) {
+document.querySelector('#slide3').addEventListener("change", function(event) {
 	event.preventDefault();
 	switchSlide(3);
 });
-															
+	
+window.addEventListener("beforeunload" , function() {
+	for (var i = 0; i< radioButtons.length; i++) {
+	radioButtons[i].checked = false;	
+	slideBody.classList.remove("slide"+(i+1)+"-background");
+	slideSwitchers[i].classList.remove("slide-switch-checked");
+	slideSlogans[i].classList.remove("slide-view");	
+}
+});
 
 
 

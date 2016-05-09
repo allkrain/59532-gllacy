@@ -1129,10 +1129,12 @@ a:active
 	position: absolute;
 	top: 0;
 	left: 50%;
+	min-width: 100%;
 	width: 100vw;
 	height: 100%;
-	-webkit-transform: translateX(-50vw);
-	        transform: translateX(-50vw);
+	-webkit-transform: translateX(-50%);
+	        transform: translateX(-50%);
+
 }
 
 .contacts {
