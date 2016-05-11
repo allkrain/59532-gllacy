@@ -29,17 +29,14 @@ function switchSlide(number) {
 	}
 	
 	for (var i = 0; i < radioButtons.length; i++) {
-		slideSwitchers[i].classList.remove("slide-switch-checked");
-	
-		slideSlogans[i].classList.remove("slide-view");
-		
+		slideSwitchers[i].classList.remove("slide-switch-checked");	
+		slideSlogans[i].classList.remove("slide-view");		
 		radioButtons[i].checked = false;
 	}
+	
 	slideBody.classList.add("slide" + number + "-background");
-	slideSwitchers[number-1].classList.add("slide-switch-checked");
-	
-	slideSlogans[number-1].classList.add("slide-view");
-	
+	slideSwitchers[number-1].classList.add("slide-switch-checked");	
+	slideSlogans[number-1].classList.add("slide-view");	
 	radioButtons[number-1].checked= true;
 }
 
@@ -83,7 +80,8 @@ feedbackOpen.addEventListener("click", function(event) {
 });
 
 feedbackClose.addEventListener("click", function(event) {
-	event.preventDefault();	feedbackForm.classList.remove("feedback-form-on");
+	event.preventDefault();
+	feedbackForm.classList.remove("feedback-form-on");
 	overlay.classList.remove("overlay-on");
 });
 
@@ -92,6 +90,7 @@ window.addEventListener("keydown", function(event) {
 		if(feedbackForm.classList.contains("feedback-form-on")) {
 			feedbackForm.classList.remove("feedback-form-on");
 		}
+		
 		if(overlay.classList.contains("overlay-on")){
 			overlay.classList.remove("overlay-on");
 		}
@@ -100,7 +99,6 @@ window.addEventListener("keydown", function(event) {
 
 document.querySelector("#feedback-name").addEventListener("focus", function(event) {
 	document.querySelector(".name-placeholder").classList.add("placeholder-focus");
-	
 	this.classList.add("color-white");
 });
 
@@ -121,7 +119,6 @@ document.querySelector("#feedback-name").addEventListener("blur", function(event
 
 document.querySelector("#feedback-email").addEventListener("focus", function(event) {
 	document.querySelector(".email-placeholder").classList.add("placeholder-focus");
-	
 	this.classList.add("color-white");
 });
 
@@ -143,7 +140,6 @@ document.querySelector("#feedback-email").addEventListener("blur", function(even
 
 document.querySelector("#feedback-message").addEventListener("focus", function(event) {
 	document.querySelector(".message-placeholder").classList.add("placeholder-focus");
-	
 	this.classList.add("color-white");
 });
 
