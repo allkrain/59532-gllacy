@@ -7,11 +7,11 @@
 		<title>HTML Academy: Глейси</title>
 		<link rel="stylesheet" href="css/normalize.css">
 		<link href='https://fonts.googleapis.com/css?family=Roboto:400,400italic,500,500italic,700,700italic,900,900italic&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
-		<link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" href="css/style.min.css">
     </head>
     <body>
-		<div class="centering-container">
-			<header class="main-header">
+		<header class="main-header">
+			<div class="centering-container">	
 				<div class="work-information">
 					<p>
 						C 10 до 20, ежедневно<br>
@@ -67,16 +67,18 @@
 						</div>
 					</div>	
 				</div>
-			</header>
-			<main>
+			</div>	
+		</header>
+		<main>
+			<div class="centering-container">
 				<div class="slider-block">
 					<input id="slide1" type="radio" name="slide-switch" value="1" checked>
 					<input id="slide2" type="radio" name="slide-switch" value="2">
 					<input id="slide3" type="radio" name="slide-switch" value="3">
 					<div class="slider-switches">
-						<label for="slide1"></label>
-						<label for="slide2"></label>
-						<label for="slide3"></label>
+						<label for="slide1" class="slide-switcher"></label>
+						<label for="slide2" class="slide-switcher"></label>
+						<label for="slide3" class="slide-switcher"></label>
 					</div>
 					<div class="slider">
 						<div class="slide slide1-content">
@@ -119,14 +121,16 @@
 					<li class="product hit">
 						<div class="product-wrapper">
 							<div class="product-image creamy-orange">
-								<img src="img/icecream_1_1200.png" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
+								<img src="img/icecream_1_1200.png" alt="" width="267" height="267" >
 								<span class="product-price">
 									310<span class="rub-symbol">/кг</span>
 								</span>
 							</div>
-							<a class="product-discribe" href="">
-								Сливочное с апельсиновым джемом и цитрусовой стружкой
-							</a>
+							<span class="product-discribe">
+								<a href="">
+									Сливочное с апельсиновым джемом и цитрусовой стружкой
+								</a>
+							</span>
 							<a class="btn product-view-btn"  href="">
 								Быстрый просмотр
 							</a>
@@ -135,14 +139,16 @@
 					<li class="product hit">
 						<div class="product-wrapper">
 							<div class="product-image creamy-coffee">
-								<img src="img/icecream_2_1200.png" alt="Сливочно-кофейное с кусочками шоколада">
+								<img src="img/icecream_2_1200.png" alt="" width="267" height="267">
 								<span class="product-price">
 									380<span class="rub-symbol">/кг</span>
 								</span>
 							</div>
-							<a class="product-discribe" href="">
-								Сливочно-кофейное с кусочками шоколада
-							</a>
+							<span class="product-discribe">
+								<a href="">
+									Сливочно-кофейное с кусочками шоколада
+								</a>
+							</span>
 							<a class="btn product-view-btn"  href="">
 								Быстрый просмотр
 							</a>
@@ -151,14 +157,16 @@
 					<li class="product hit">
 						<div class="product-wrapper">
 							<div class="product-image creamy-strawberry">
-								<img src="img/icecream_3_1200.png" alt="Сливочно-клубничное с присыпкой из белого шоколада">
+								<img src="img/icecream_3_1200.png" alt="" width="267" height="267">
 								<span class="product-price">
 									355<span class="rub-symbol">/кг</span>
 								</span>
 							</div>
-							<a class="product-discribe" href="">
-								Сливочно-клубничное с присыпкой из белого шоколада
-							</a>
+							<span class="product-discribe">
+								<a href="">
+									Сливочно-клубничное с присыпкой из белого шоколада
+								</a>
+							</span>
 							<a class="btn product-view-btn"  href="">
 								Быстрый просмотр
 							</a>
@@ -167,14 +175,15 @@
 					<li class="product hit">
 						<div class="product-wrapper">
 							<div class="product-image creamy-caramel">
-								<img src="img/icecream_4_1200.png" alt="Сливочное крем-брюле с карамельной подливкой">
-								<span class="product-price">
-									415<span class="rub-symbol">/кг</span>
+								<img src="img/icecream_4_1200.png" alt="" width="267" height="267">
+								<span class="product-price">415<span class="rub-symbol">/кг</span>
 								</span>
 							</div>
-							<a class="product-discribe" href="">
-								Сливочное крем-брюле с карамельной подливкой
-							</a>
+							<span class="product-discribe">
+								<a href="">
+									Сливочное крем-брюле с карамельной подливкой
+								</a>
+							</span>
 							<a class="btn product-view-btn"  href="">
 								Быстрый просмотр
 							</a>
@@ -218,7 +227,9 @@
 						</form>
 					</div>
 				</section>
-				<section class="location">
+			</div>	
+			<section class="location">
+				<div class="centering-container">
 					<div class="contacts">
 						<p>
 							Адрес главного офиса и<br>
@@ -232,10 +243,12 @@
 						</p>
 						<a class="btn feedback-btn" href="">Форма обратной связи</a>
 					</div>
-					<div id="location-map" class="location-map"></div>
-				</section>
-			</main>
-			<footer class="main-footer">
+				</div>	
+				<div id="location-map" class="location-map"></div>
+			</section>
+		</main>
+		<footer class="main-footer">
+			<div class="centering-container">
 				<div class="footer-social">
 					<ul>
 						<li><a class="social-btn social-twitter" href="http://twitter.com">Твиттер</a></li>
@@ -251,7 +264,7 @@
 				</div>
 				<nav class="footer-menu">
 					<ul class="menu-inform">
-						<li class="heart"><a  href=""><b>Для поставщиков</b></a></li>
+						<li><a class="heart"  href=""><b>Для поставщиков</b></a></li>
 						<li><a href="">О производстве</a></li>
 					</ul>
 					<ul class="menu-document">
@@ -259,20 +272,23 @@
 						<li><a href="">Экологические стандарты</a></li>
 					</ul>
 				</nav>
-			</footer>
-		</div>
+			</div>	
+		</footer>
 		<div class="feedback-form">
 			<button class="close"></button>
 			<h2>Мы обязательно вам ответим!</h2>
 			<form action="#" method="post">
-				<input type="text" name="name" placeholder="Как вас зовут?">
-				<input type="email" name="email" placeholder="Ваша почта для ответа?">
-				<textarea name="message" rows="5" placeholder="Напишите что-нибудь..."></textarea>
+				<span class="placeholder name-placeholder" data-placeholder="Как вас зовут?"></span>
+				<input id="feedback-name" class="feedback=field" type="text" name="name" placeholder="Как вас зовут?" required>	
+				<span class="placeholder email-placeholder" data-placeholder="Ваша почта для ответа?"></span>
+				<input id="feedback-email" class="feedback=field" type="email" name="email" placeholder="Ваша почта для ответа?" required>	
+				<span class="placeholder message-placeholder" data-placeholder="Напишите что-нибудь..."></span>
+				<textarea id="feedback-message" class="feedback=field" name="message" rows="5" placeholder="Напишите что-нибудь..."></textarea>
 				<button class="btn feedback-submit-btn" type="submit">Отправить</button>
 			</form>
 		</div>
 		<div class="overlay"></div>
-		<script src="js/script.js"></script>
+		<script src="js/script.min.js"></script>
 		<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=DxuEr6KorX9aXE-HA6lamG4KFwPJBpl7&id=location-map&lang=ru_RU&sourceType=constructor&scroll=true"></script>
 	</body>
 </html>
